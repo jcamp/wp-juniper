@@ -1,0 +1,14 @@
+{
+    "name": "Juniper",
+    "creator": "Plain",
+    "creator_url": "http://plainmade.com",
+    "content_types": {
+            "image": "Image",
+            "focus": "Focal Point",
+            "blurb": "Info Blurb"
+    },
+    "feed": [
+    	"blog",
+    	"image"
+    ]
+}
