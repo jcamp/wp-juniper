@@ -23,6 +23,8 @@
 	Functions File for Custom Header
 */
 
+
+/* Header Background Image */
 function juniper_custom_header_setup() {
     
     $args = array(
@@ -36,5 +38,24 @@ function juniper_custom_header_setup() {
     add_theme_support( 'custom-header', $args );
 }
 add_action( 'after_setup_theme', 'juniper_custom_header_setup' );
+
+/* Header Avatar or Logo Image */
+function juniper_theme_customizer( $wp_customize ) {
+   
+    $wp_customize->add_section( 'juniper_logo_section' , array(
+        'title'       => __( 'Logo', 'i18n' ),
+        'priority'    => 30,
+        'description' => __('Upload a logo or avatar to customize your header.'),
+    ) );
+
+    $wp_customize->add_setting( 'juniper_logo' );
+    
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'juniper_logo', array(
+        'label'    => __( 'Logo', 'i18n' ),
+        'section'  => 'juniper_logo_section',
+        'settings' => 'juniper_logo',
+    ) ) );
+}
+add_action( 'customize_register', 'juniper_theme_customizer' );
 
 ?>

@@ -49,7 +49,7 @@
 
 			<div class="row">
 				<div class="large-9 large-centered columns cf back-link">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="barley-icon-angle-left"></i> <?php __('Back', 'i18n'); ?></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="barley-icon-angle-left"></i> <?php echo __('Back', 'i18n'); ?></a>
 				</div>
 			</div>
 

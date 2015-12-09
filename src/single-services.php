@@ -47,8 +47,8 @@
 
 			<div class="row">
 				<div class="large-9 large-centered columns cf back-link">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="seperator"><i class="barley-icon-angle-left"></i> <?php __('Back Home', 'i18n'); ?></a>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>services" title="<?php __('View All Services', 'i18n'); ?>"><?php __('View All', 'i18n'); ?> <i class="barley-icon-angle-right"></i></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="seperator"><i class="barley-icon-angle-left"></i> <?php echo __('Back Home', 'i18n'); ?></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>services" title="<?php echo __('View All Services', 'i18n'); ?>"><?php echo __('View All', 'i18n'); ?> <i class="barley-icon-angle-right"></i></a>
 				</div>
 			</div>
 		

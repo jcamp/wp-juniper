@@ -27,9 +27,9 @@
 			<div class="row">
 				<div class="large-9 large-centered columns cf">
 					<article>
-						<h2 class="four-o-four"><?php __('Oops!', 'i18n'); ?></h2>
+						<h2 class="four-o-four"><?php echo __('Oops!', 'i18n'); ?></h2>
 						<div>
-							<p><?php __('Not sure what happened, but the page you\'re looking for doesn\'t exist.', 'i18n'); ?></p>
+							<p><?php echo __('Not sure what happened, but the page you\'re looking for doesn\'t exist.', 'i18n'); ?></p>
 						</div>	
 					</article>
 				</div>
@@ -37,7 +37,7 @@
 
 			<div class="row">
 				<div class="large-9 large-centered columns cf back-link four-o-four">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="barley-icon-angle-left"></i> <?php __('Back Home', 'i18n'); ?></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="barley-icon-angle-left"></i> <?php echo __('Back Home', 'i18n'); ?></a>
 				</div>
 			</div>
 		

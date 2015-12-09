@@ -40,7 +40,7 @@ while ( have_posts() ) : the_post(); ?>
 			
 			<div class="row">
 				<div class="large-9 large-centered columns cf back-link">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="barley-icon-angle-left"></i> <?php __('Back Home', 'i18n'); ?></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="barley-icon-angle-left"></i> <?php echo __('Back Home', 'i18n'); ?></a>
 				</div>
 			</div>
 		

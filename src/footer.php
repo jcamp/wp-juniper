@@ -34,7 +34,7 @@
 				<div class="row">
 					<div class="large-12 columns">
 						<div class="large-6 columns">
-							<span class="copyright">&copy; <?php echo date('Y'); ?> <?php echo bloginfo('name'); ?> <?php __('All rights reserved.', 'i18n'); ?></span>
+							<span class="copyright">&copy; <?php echo date('Y'); ?> <?php echo bloginfo('name'); ?> <?php echo __('All rights reserved.', 'i18n'); ?></span>
 						</div>
 						<div class="large-6 columns">
 							<span class="barley-logo">Theme made by <a href="http://plainmade.com/" title="Plain, Design and Development in Scranton, PA.">Plain</a>.</span>

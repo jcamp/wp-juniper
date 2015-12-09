@@ -59,11 +59,19 @@
 			</nav>
 			<!-- Logo & Icons -->
 			<div class="large-12 columns">
-				<div id="logo">
-					<div id="logo-image">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg">
+					<?php if ( get_theme_mod( 'juniper_logo' ) ) : ?>
+					<div id="logo">
+						<div id="logo-image">
+							<img src="<?php echo esc_url( get_theme_mod( 'juniper_logo' ) ); ?>">
+						</div>
 					</div>
-				</div>
+					<?php else : ?>
+					<div id="logo">
+						<div id="logo-image">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg">
+						</div>
+					</div>
+					<?php endif; ?>
 				<h1 class="site-title"><?php echo bloginfo('name'); ?></h1>
 				
 				<?php get_sidebar('header'); ?>

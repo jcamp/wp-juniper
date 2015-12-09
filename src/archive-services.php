@@ -25,7 +25,7 @@
 			
 			<div class="row">
 				<div class="large-9 large-centered columns cf">
-					<h2 class="page-title"><?php __('Services', 'i18n'); ?></h2>
+					<h2 class="page-title"><?php echo __('Services', 'i18n'); ?></h2>
 					<?php while ( have_posts() ) : the_post(); ?>
 					<div class="row focus-index-entry">
 						<div class="large-3 columns">
@@ -48,7 +48,7 @@
 
 			<div class="row">
 				<div class="large-9 large-centered columns cf back-link">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="barley-icon-angle-left"></i> <?php __('Back', 'i18n'); ?></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="barley-icon-angle-left"></i> <?php echo __('Back', 'i18n'); ?></a>
 				</div>
 			</div>
 		

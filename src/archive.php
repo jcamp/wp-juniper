@@ -27,17 +27,17 @@
 				<div class="large-9 large-centered columns cf">
 					<div class="archive-list">
 						<?php if ( is_category() ) { ?>
-							<h2><?php single_cat_title(); ?> <?php __('Category', 'i18n'); ?></h2>
+							<h2><?php single_cat_title(); ?> <?php echo __('Category', 'i18n'); ?></h2>
 							
 						<?php } ?>
 							
 						<?php if ( is_tag() ) { ?>
-							<h2><?php single_tag_title(); ?> <?php __('Tag', 'i18n'); ?></h2>
+							<h2><?php single_tag_title(); ?> <?php echo __('Tag', 'i18n'); ?></h2>
 							
 						<?php } ?>
 						
 						<?php if ( is_date() ) { ?>
-							<h2><?php __('Browsing Posts by Date', 'i18n'); ?></h2>
+							<h2><?php echo __('Browsing Posts by Date', 'i18n'); ?></h2>
 							
 						<?php } ?>
 						<?php while ( have_posts() ) : the_post(); ?>

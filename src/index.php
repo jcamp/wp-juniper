@@ -26,7 +26,7 @@
 			<div class="row">
 				<div class="large-9 large-centered columns cf">
 					<div class="archive-list">
-						<h2><?php __('Blog', 'i18n'); ?></h2>
+						<h2><?php echo __('Blog', 'i18n'); ?></h2>
 						<?php while ( have_posts() ) : the_post(); ?>
 						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?> <span class="published_on"><?php echo get_the_date('F jS, Y'); ?></span></h3></a>
 						<?php endwhile; ?>
