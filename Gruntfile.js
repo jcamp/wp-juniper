@@ -3,7 +3,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     clean: {
-        build: ['dist/']
+        main: ['dist/'],
+        build: ['dist/','release/']
     },
     concat: {
         basic: {
@@ -26,6 +27,16 @@ module.exports = function(grunt) {
                 }
             }
         },
+    compress: {
+        main: {
+            options: {
+                archive: 'release/juniper.zip'
+            },
+            files: [
+                {expand: true, cwd: 'dist/', src: ['**']},
+            ]
+        }
+    },
     copy: {
         main: {
             files: [
@@ -116,6 +127,7 @@ grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-copy');
 // No longer used grunt.loadNpmTasks('grunt-postcss');
 
-grunt.registerTask('default', ['clean', 'compass', 'copy', 'concat']);
+grunt.registerTask('default', ['clean:main', 'compass', 'copy', 'concat']);
+grunt.registerTask('build', ['clean:build', 'compass', 'copy', 'concat', 'compress']);
 
 };
