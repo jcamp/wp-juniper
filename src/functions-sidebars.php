@@ -24,18 +24,10 @@
 */
 
 function juniper_sidebars_widgets_init() {
-
-    register_sidebar( array(
-        'name' => __('Header Social Links'),
-        'id' => 'header_social',
-        'description'   => __( 'A sideways bar of sorts that appears in the header and displays social accounts.', 'i18n' ),
-        'before_widget' => '',
-        'after_widget' => '',
-        'before_title' => '',
-        'after_title' => '',
-      ) );
+    // Just in case we need a sidebar for blog
+   
 
 }
-add_action( 'widgets_init', 'juniper_sidebars_widgets_init' );
+//add_action( 'widgets_init', 'juniper_sidebars_widgets_init' );
 
 ?>

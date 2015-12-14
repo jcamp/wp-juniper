@@ -40,8 +40,8 @@ include('functions-custom-header.php');
 // Social Widget for Header
 include('functions-sidebars.php');
 
-// Social Widget for Header
-include('functions-social-widget.php');
+// Social Widget for Header NO LONGER USED
+//include('functions-social-widget.php');
 
 // Weird WordPress things.
 add_theme_support( 'post-thumbnails' , array('post', 'page', 'portfolio', 'testimonials', 'services') );

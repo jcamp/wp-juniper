@@ -73,8 +73,21 @@
 					</div>
 					<?php endif; ?>
 				<h1 class="site-title"><?php echo bloginfo('name'); ?></h1>
-				
-				<?php get_sidebar('header'); ?>
+				<?php if ( get_theme_mod( 'juniper_twitter' ) || get_theme_mod( 'juniper_facebook' ) || get_theme_mod( 'juniper_linkedin' ) || get_theme_mod( 'juniper_instagram' )|| get_theme_mod( 'juniper_googleplus' ) || get_theme_mod( 'juniper_flickr' ) ||  get_theme_mod( 'juniper_behance' ) || get_theme_mod( 'juniper_dribbble' ) || get_theme_mod( 'juniper_pinterest' ) ): ?>
+				<div class="social-icons hide-for-small">
+					<div id="social">
+						<?php if ( get_theme_mod( 'juniper_twitter' ) ) : echo '<a href="https://twitter.com/' . get_theme_mod( 'juniper_twitter' ) .'"><img src="' . get_template_directory_uri() . '/images/social_icons/twitter.svg"></a>'; endif; ?>
+						<?php if ( get_theme_mod( 'juniper_facebook' ) ) : echo '<a href="https://facebook.com/' . get_theme_mod( 'juniper_facebook' ) .'"><img src="' . get_template_directory_uri() . '/images/social_icons/facebook.svg"></a>'; endif; ?>
+						<?php if ( get_theme_mod( 'juniper_instagram' ) ) : echo '<a href="https://instagram.com/' . get_theme_mod( 'juniper_instagram' ) .'"><img src="' . get_template_directory_uri() . '/images/social_icons/instagram.svg"></a>'; endif; ?>
+						<?php if ( get_theme_mod( 'juniper_linkedin' ) ) : echo '<a href="https://linkedin.com/in/' . get_theme_mod( 'juniper_linkedin' ) .'"><img src="' . get_template_directory_uri() . '/images/social_icons/linkedin.svg"></a>'; endif; ?>
+						<?php if ( get_theme_mod( 'juniper_behance' ) ) : echo '<a href="https://behance.net/' . get_theme_mod( 'juniper_behance' ) .'"><img src="' . get_template_directory_uri() . '/images/social_icons/behance.svg"></a>'; endif; ?>
+						<?php if ( get_theme_mod( 'juniper_pinterest' ) ) : echo '<a href="https://pinterest.com/' . get_theme_mod( 'juniper_pinterest' ) .'"><img src="' . get_template_directory_uri() . '/images/social_icons/pinterest.svg"></a>'; endif; ?>
+						<?php if ( get_theme_mod( 'juniper_flickr' ) ) : echo '<a href="https://flickr.com/photos/' . get_theme_mod( 'juniper_flickr' ) .'"><img src="' . get_template_directory_uri() . '/images/social_icons/flickr.svg"></a>'; endif; ?>
+						<?php if ( get_theme_mod( 'juniper_dribbble' ) ) : echo '<a href="https://dribbble.com/' . get_theme_mod( 'juniper_dribbble' ) .'"><img src="' . get_template_directory_uri() . '/images/social_icons/dribbble.svg"></a>'; endif; ?>
+						<?php if ( get_theme_mod( 'juniper_googleplus' ) ) : echo '<a href="https://plus.google.com/u/0/' . get_theme_mod( 'juniper_googleplus' ) .'"><img src="' . get_template_directory_uri() . '/images/social_icons/googleplus.svg"></a>'; endif; ?>
+					</div>
+				</div>
+				<?php endif; ?>
 				
 			</div>
 		</div>
