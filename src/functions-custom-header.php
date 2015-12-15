@@ -127,6 +127,56 @@ function juniper_theme_customizer( $wp_customize ) {
         'settings' => 'juniper_pinterest',
     ) ) );
     
+    /* Home Page Customization */
+    $wp_customize->add_section( 'juniper_homepage_section' , array(
+        'title'       => __( 'Home Page', 'i18n' ),
+        'priority'    => 30,
+        'description' => __('Customize your home page by adding an introduction and selecting which Post Types to show or hide.'),
+    ) );
+    $wp_customize->add_setting( 'juniper_homepage_intro' );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'juniper_homepage_intro', array(
+        'label'    => __( 'Introduction', 'i18n' ),
+        'section'  => 'juniper_homepage_section',
+        'description' => __( '140-characters to introduce your site. Leave blank to remove.', 'i18n' ),
+        'settings' => 'juniper_homepage_intro',
+    ) ) );
+    
+    $wp_customize->add_setting( 'juniper_homepage_portfolio' );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'juniper_homepage_portfolio', array(
+        'label'    => __( 'Portfolio items:', 'i18n' ),
+        'type'     => 'select',
+        'choices' => array('show'=>'Show','hide'=>'Hide'),
+        'section'  => 'juniper_homepage_section',
+        'settings' => 'juniper_homepage_portfolio',
+    ) ) );
+    
+    $wp_customize->add_setting( 'juniper_homepage_services' );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'juniper_homepage_services', array(
+        'label'    => __( 'Services:', 'i18n' ),
+        'type'     => 'select',
+        'choices' => array('show'=>'Show','hide'=>'Hide'),
+        'section'  => 'juniper_homepage_section',
+        'settings' => 'juniper_homepage_services',
+    ) ) );
+    
+    $wp_customize->add_setting( 'juniper_homepage_testimonials' );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'juniper_homepage_testimonials', array(
+        'label'    => __( 'Testimonials:', 'i18n' ),
+        'type'     => 'select',
+        'choices' => array('show'=>'Show','hide'=>'Hide'),
+        'section'  => 'juniper_homepage_section',
+        'settings' => 'juniper_homepage_testimonials',
+    ) ) );
+    
+    $wp_customize->add_setting( 'juniper_homepage_blogposts' );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'juniper_homepage_blogposts', array(
+        'label'    => __( 'Blog Posts:', 'i18n' ),
+        'type'     => 'select',
+        'choices' => array('show'=>'Show','hide'=>'Hide'),
+        'section'  => 'juniper_homepage_section',
+        'settings' => 'juniper_homepage_blogposts',
+    ) ) );
+    
 }
 add_action( 'customize_register', 'juniper_theme_customizer' );
 

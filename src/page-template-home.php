@@ -27,19 +27,22 @@
  ?>
 
 		<div id="home-content">
-
+			
+			<?php if ( get_theme_mod( 'juniper_homepage_intro' ) ) : ?>
 			<section class="cf">
 				<div class="row">
 					<div class="large-12 columns cf">
 						<div class="intro">
-							<p><?php echo get_post_meta( $post->ID, 'homepage_intro', true ); ?></p>
+							<p><?php echo get_theme_mod( 'juniper_homepage_intro' ); ?></p>
 						</div>
 					</div>
 				</div>
 			</section>
+			<?php endif; ?>
 
 			<?php
 			// Begin Portfolio Items
+			if ( !get_theme_mod( 'juniper_homepage_portfolio' ) ||  get_theme_mod( 'juniper_homepage_portfolio' ) != 'hide' ) :
 			$portfolio_items = new WP_Query( 'post_type=portfolio&posts_per_page=8&order=asc' );
 			if ( $portfolio_items->have_posts() ) : ?>
 			<section class="image-gallery cf">
@@ -61,10 +64,11 @@
 					</div>
 				</div>
 			</section>
-			<?php endif; // end Portfolio Items ?>
+			<?php endif; endif; // end Portfolio Items  ?>
 
 			<?php
 			// Begin Services
+			if ( !get_theme_mod( 'juniper_homepage_services' ) ||  get_theme_mod( 'juniper_homepage_services' ) != 'hide' ) :
 			$services_items = new WP_Query( 'post_type=services&posts_per_page=3&order=asc' );
 			if ( $services_items->have_posts() ) : ?>
 			<section class="focus-container cf">
@@ -93,10 +97,11 @@
 					</div>
 				</div>
 			</section>
-			<?php endif; // End Services ?>
+			<?php endif; endif; // End Services ?>
 
 			<?php
 			// Begin Testimonials
+			if (  get_theme_mod( 'juniper_homepage_testimonials' ) != 'hide' ) :
 			$testimonials_items = new WP_Query( 'post_type=testimonials&posts_per_page=2&order=asc' );
 			if ( $testimonials_items->have_posts() ) : ?>
 			<section class="blurb-container cf">
@@ -119,10 +124,11 @@
 					</div>
 				</div>
 			</section>
-			<?php endif; // End Testimonials ?>
+			<?php endif; endif; // End Testimonials ?>
 
 			<?php
 			// Begin Blog Posts
+			if ( !get_theme_mod( 'juniper_homepage_blogposts' ) ||  get_theme_mod( 'juniper_homepage_blogposts' ) != 'hide' ) :
 			$recent_blogposts = new WP_Query( array ('post_type' => 'post', 'posts_per_page' => '4', 'order' => 'DESC' ) );
 			if ( $recent_blogposts->have_posts() ) : ?>
 			<section class="blog-container cf">
@@ -147,7 +153,7 @@
 					</div>
 				</div>
 			</section>
-			<?php endif; // End Blog Posts ?>
+			<?php endif; endif; // End Blog Posts ?>
 
 		</div>
 		
