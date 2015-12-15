@@ -33,9 +33,18 @@ function juniper_custom_header_setup() {
         'height'             => 1841,
         'flex-width'         => true,
         'flex-height'        => true,
+        'uploads'            => true,
     );
     
     add_theme_support( 'custom-header', $args );
+    
+    register_default_headers( array(
+		'juniper' => array(
+			'url'           => get_template_directory_uri() . '/images/background.jpg',
+            'thumbnail_url' => get_template_directory_uri() . '/images/background.jpg',
+			'description'   => _x( 'Juniper', 'A default background for Juniper.', 'i18n' )
+		),
+	) );
 }
 add_action( 'after_setup_theme', 'juniper_custom_header_setup' );
 
