@@ -6,6 +6,13 @@ For more information visit [http://plainmade.com/juniper](http://plainmade.com/j
 
 Juniper is an open source, responsive professional WordPress template that supports Custom Post Types for portfolio items, services, and testimonials. It also has a blog.
 
+# Credits
+
+Contributors [Kyle Ruane](http://kyleruane.com/), [Colin Devroe](http://cdevroe.com)
+QA by [Sarah Pressler](http://sarahpressler.com/)
+
+Theme Update Checker Library by [Janis Elsts](http://w-shadow.com/)
+
 # License 
 
 Juniper for WordPress
