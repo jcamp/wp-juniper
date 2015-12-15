@@ -63,6 +63,13 @@ module.exports = function(grunt) {
                 },
                 {
                     expand: true, 
+                    src: ['src/theme-updates/*.php'],
+                    dest: 'dist/theme-updates',
+                    flatten: true,
+                    filter: 'isFile'
+                },
+                {
+                    expand: true, 
                     src: ['src/*.php'],
                     dest: 'dist/',
                     flatten: true,

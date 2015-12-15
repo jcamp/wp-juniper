@@ -49,4 +49,11 @@ add_theme_support( 'html5', array('gallery','search-form') );
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'title-tag' );
 
+// WordPress Theme Update API
+require 'theme-updates/theme-update-checker.php';
+$juniper_update_checker = new ThemeUpdateChecker(
+    'juniper',
+    'http://plain-products.s3.amazonaws.com/juniper/version.json'
+);
+
 ?>
