@@ -4,7 +4,7 @@ Made by [Plain](http://plainmade.com/) in Scranton, PA.
 
 For more information visit [http://plainmade.com/juniper](http://plainmade.com/juniper)
 
-Juniper is an open source, responsive professional WordPress template that supports Custom Post Types for portfolio items, services, and testimonials. It also has a blog.
+Juniper is an open source, responsive professional WordPress theme that supports Custom Post Types for portfolio items, services, and testimonials. It also has a blog.
 
 # Credits
 
