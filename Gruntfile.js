@@ -13,20 +13,20 @@ module.exports = function(grunt) {
         }
     },
     compass: {
-            all: {
-                options: {
-                    sassDir: 'src/stylesheets',
-                    cssDir: 'dist/stylesheets',
-                    fontsDir: 'dist/fonts',
-                    environment: 'production',
-                    outputStyle: 'compressed',
-                    relativeAssets: true,
-                    noLineComments: true,
-                    force: true,
-                    specify: 'src/stylesheets/*.scss'
-                }
+        all: {
+            options: {
+                sassDir: 'src/stylesheets',
+                cssDir: 'dist/stylesheets',
+                fontsDir: 'dist/fonts',
+                environment: 'production',
+                outputStyle: 'compressed',
+                relativeAssets: true,
+                noLineComments: true,
+                force: true,
+                specify: 'src/stylesheets/*.scss'
             }
-        },
+        }
+    },
     compress: {
         main: {
             options: {

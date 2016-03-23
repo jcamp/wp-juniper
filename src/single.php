@@ -27,11 +27,11 @@
 			<div class="row">
 				<div class="large-9 large-centered columns cf">
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<h2><?php the_title(); ?></h2>
+						<h2 data-root-key="the_title" data-barley-editor="mini" data-root-postid="<?php echo $post->ID; ?>"><?php the_title(); ?></h2>
 						<div class="meta">
 							<span class="published_on"><?php the_date('F jS, Y'); ?></span>
 						</div>
-						<div>
+						<div data-root-key="the_content" data-barley-editor="advanced" data-root-postid="<?php echo $post->ID; ?>">
 							<?php the_content(); ?>
 						</div>
 					</article>

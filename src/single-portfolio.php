@@ -30,7 +30,11 @@
 				<div class="row">
 					<div class="large-12 columns cf">
 						<div class="image-content">
+                            <?php if ( isset($featured_image[0]) ) : ?>
 							<img src="<?php echo $featured_image[0]; ?>" alt="<?php the_title_attribute(); ?>"/>
+                            <?php else : ?>
+                            Set featured image.
+                            <?php endif; ?>
 						</div>
 					</div>
 				</div>
@@ -39,11 +43,11 @@
 			<div class="row">
 				<div class="large-9 large-centered columns cf">
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<h2 data-barley="image_title" data-barley-editor="simple"><?php the_title(); ?></h2>
+						<h2 data-root-key="the_title" data-barley-editor="mini" data-root-postid="<?php echo $post->ID; ?>"><?php the_title(); ?></h2>
 						<div class="meta">
 							<span class="published_on" id="image_published_on"><?php the_date('F jS, Y'); ?></span>
 						</div>
-						<div>
+						<div data-root-key="the_content" data-barley-editor="advanced" data-root-postid="<?php echo $post->ID; ?>">
 							<?php the_content(); ?>
 						</div>	
 					</article>
